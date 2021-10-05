@@ -30,8 +30,11 @@ int main()
 		std::cout << "No s2 identified !" << std::endl;
 	if (!(file.is_open()) || s2.empty() || s1.empty())
 		return (0);
-	file.close();
+	filestream = filestream + ".replace";
 	std::ofstream ofs(filestream.c_str());
+	for (std::string line; getline(file, line);)
+		ofs << line << std::endl;
 	ofs << s1 << s2 << std::endl;
+	file.close();
 	ofs.close();
 }
