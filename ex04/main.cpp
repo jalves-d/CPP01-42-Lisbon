@@ -19,6 +19,7 @@ int main()
     std::string s1;
     std::string s2;
 	std::ifstream file;
+	size_t pos;
 
 	getdatas(filestream, s1, s2);
 	file.open(filestream.c_str());
@@ -33,8 +34,15 @@ int main()
 	filestream = filestream + ".replace";
 	std::ofstream ofs(filestream.c_str());
 	for (std::string line; getline(file, line);)
+	{
+		pos = 0;
+		while ((pos = line.find(s1)) != std::string npos)
+		{
+			line.erase(pos, s1);
+			line.insert(pos, s2);
+		}
 		ofs << line << std::endl;
-	ofs << s1 << s2 << std::endl;
+	}
 	file.close();
 	ofs.close();
 }
