@@ -1,37 +1,37 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 #include <iostream>
 
-Karen::Karen( void )
+Harl::Harl( void )
 {
     return;
 }
 
-Karen::~Karen( void )
+Harl::~Harl( void )
 {
     return;
 }
 
-void    Karen::debug( void )
+void    Harl::debug( void )
 {
-    std::cout << "I love to get extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. I just love it!" << std::endl;
+    std::cout << "I love to get extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. I really do!" << std::endl;
 }
 
-void    Karen::info( void )
+void    Harl::info( void )
 {
-    std::cout << "I cannot believe adding extra bacon cost more money. You don’t put enough! If you did I would not have to ask for it!" << std::endl;
+    std::cout << "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
 }
 
-void    Karen::warning( void )
+void    Harl::warning( void )
 {
-    std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming here for years and you just started working here last month." << std::endl;
+    std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month." << std::endl;
 }
 
-void    Karen::error( void )
+void    Harl::error( void )
 {
     std::cout << "This is unacceptable, I want to speak to the manager now." << std::endl;
 }
 
-int    Karen::getlevel( std::string level )
+int    Harl::getlevel( std::string level )
 {
 	std::string levels[4];
 	int i;
@@ -49,14 +49,14 @@ int    Karen::getlevel( std::string level )
 	return (-1);
 }
 
-void    Karen::complain( std::string level )
+void    Harl::complain( std::string level )
 {
-	void (Karen::*pfnArray[4])();
-	Karen karen;
+	void (Harl::*pfnArray[4])();
+	Harl harl;
 
-	pfnArray[0] = &Karen::debug;
-	pfnArray[1] = &Karen::info;
-	pfnArray[2] = &Karen::warning;
-	pfnArray[3] = &Karen::error;
-	(karen.*pfnArray[karen.getlevel(level)])();
+	pfnArray[0] = &Harl::debug;
+	pfnArray[1] = &Harl::info;
+	pfnArray[2] = &Harl::warning;
+	pfnArray[3] = &Harl::error;
+	(harl.*pfnArray[harl.getlevel(level)])();
 }

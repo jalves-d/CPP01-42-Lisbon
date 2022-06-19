@@ -1,14 +1,14 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 int	main(int argc, char **argv)
 {
-	Karen	Karen;
+	Harl	Harl;
 	std::string info;
 
 	info = argv[1];
 	if (argc == 2)
 	{
-		switch (Karen.getlevel(info))
+		switch (Harl.getlevel(info))
 		{
 			case 0 : std::cout << "[DEBUG]" << std::endl;
 					break;
@@ -20,8 +20,8 @@ int	main(int argc, char **argv)
 					break;
 			default : std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 		}
-		if (Karen.getlevel(info) != -1)
-			Karen.complain(info);
+		if (Harl.getlevel(info) != -1)
+			Harl.complain(info);
 	}
 	else
 		std::cout << "Error, invalid parameters !" << std::endl;

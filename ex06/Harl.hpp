@@ -1,9 +1,9 @@
-#ifndef KAREN_HPP
-# define KAREN_HPP
+#ifndef HARL_HPP
+# define HARL_HPP
 
 #include <iostream>
 
-class Karen
+class Harl
 {
 	private:
 		void debug( void );
