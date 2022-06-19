@@ -1,11 +1,11 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 int	main(void){
-	Karen	Karen;
+	Harl	Harl;
 
-	std::cout << "Toma Karen Toma !" << std::endl;
-	Karen.complain("DEBUG");
-	Karen.complain("INFO");
-	Karen.complain("WARNING");
-	Karen.complain("ERROR");
+	std::cout << "Toma Harl Toma !" << std::endl;
+	Harl.complain("DEBUG");
+	Harl.complain("INFO");
+	Harl.complain("WARNING");
+	Harl.complain("ERROR");
 }

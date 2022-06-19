@@ -1,7 +1,7 @@
-NAME		=	Karen
+NAME		=	Harl
 
 SRCS		=	./main.cpp \
-				./Karen.cpp
+				./Harl.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 
